@@ -1,4 +1,4 @@
-## Experiment 5
+## <center><h2>Experiment 5</h2></center>
 
 Q1 . Display the total number of employee working in the company.
 ## <h4>Queries:</h4>
