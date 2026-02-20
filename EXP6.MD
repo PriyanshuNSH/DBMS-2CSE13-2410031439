@@ -1,7 +1,7 @@
 ## Experiment 6
 
 Q1 . Display empno, ename, deptno from employee table. Instead of displaying department numbers, display the related department name (Use decode function).
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT empno, ename,
 CASE deptno
@@ -12,7 +12,7 @@ CASE deptno
 END AS department_name
 FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-------+--------+-----------------+
 | empno | ename  | department_name |
@@ -36,11 +36,11 @@ FROM employee;
  ```
 
 Q2 . Display your age in days.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT DATEDIFF(CURDATE(), '2005-01-01') AS age_in_days;
  ```
- ## Output
+ ## <h4>Output:</h4>
  ```sql
  +-------------+
 | age_in_days |
@@ -51,11 +51,11 @@ Q2 . Display your age in days.
  ```
 
 Q3 . Display your age in months.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT TIMESTAMPDIFF(MONTH, '2005-01-01', CURDATE()) AS age_in_months;
  ```
- ## Output
+ ## <h4>Output:</h4>
  ```sql
  +---------------+
 | age_in_months |
@@ -66,11 +66,11 @@ Q3 . Display your age in months.
  ```
 
 Q4 . Display the current date as 15th August Friday Nineteen Ninety-Seven.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT DATE_FORMAT(CURDATE(), '%D %M %W %Y');
  ```
- ## Output
+ ## <h4>Output:</h4>
  ```sql
  +---------------------------------------+
 | DATE_FORMAT(CURDATE(), '%D %M %W %Y') |
@@ -81,13 +81,13 @@ Q4 . Display the current date as 15th August Friday Nineteen Ninety-Seven.
  ```
 
 Q5 . Display the following output for each row from employee table.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT CONCAT(ename, ' joined on ', 
 DATE_FORMAT(hiredate, '%W %D %M %Y')) 
 FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +---------------------------------------------------------------------+
 | CONCAT(ename, ' joined on ',
@@ -112,14 +112,14 @@ DATE_FORMAT(hiredate, '%W %D %M %Y')) |
  ```
 
 Q6 . Scott has joined the company on Wednesday 13th August Nineteen Ninety.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT CONCAT('Scott has joined the company on ',
 DATE_FORMAT(hiredate, '%W %D %M %Y'))
 FROM employee
 WHERE ename = 'SCOTT';
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +----------------------------------------------------------------------------------+
 | CONCAT('Scott has joined the company on ',
@@ -131,12 +131,12 @@ DATE_FORMAT(hiredate, '%W %D %M %Y')) |
  ```
 
 Q7 . Find the date for nearest Saturday after current date.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT DATE_ADD(CURDATE(), 
 INTERVAL (7 - WEEKDAY(CURDATE())) DAY) AS next_saturday;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +---------------+
 | next_saturday |
@@ -147,11 +147,11 @@ INTERVAL (7 - WEEKDAY(CURDATE())) DAY) AS next_saturday;
  ```
 
 Q8 . Display current time.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT CURTIME();
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-----------+
 | CURTIME() |
@@ -162,11 +162,11 @@ Q8 . Display current time.
  ```
 
 Q9 . Display the date three months before the current date.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT DATE_SUB(CURDATE(), INTERVAL 3 MONTH);
  ```
- ## Output
+ ## <h4>Output:</h4>
  ```sql
  +---------------------------------------+
 | DATE_SUB(CURDATE(), INTERVAL 3 MONTH) |
@@ -177,12 +177,12 @@ Q9 . Display the date three months before the current date.
  ```
 
 Q10 . Display those employees who joined in the company in the month of December.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT * FROM employee
 WHERE MONTH(hiredate) = 12;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-------+-------+---------+------+------------+---------+------+--------+
 | empno | ename | job     | mgr  | hiredate   | sal     | comm | deptno |
@@ -196,35 +196,35 @@ WHERE MONTH(hiredate) = 12;
  ```
 
 Q11 . Display those employees whose first 2 characters from hiredate match the last 2 characters of salary.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT * FROM employee
 WHERE LEFT(DATE_FORMAT(hiredate,'%d'),2) =
 RIGHT(sal,2);
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  Empty set (0.002 sec)
  ```
 
 Q12 . Display those employees whose 10% of salary is equal to the year of joining.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT * FROM employee
 WHERE sal * 0.10 = YEAR(hiredate);
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  Empty set (0.003 sec)
  ```
 
 Q13 . Display those employees who joined the company before 15th of the month.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT * FROM employee
 WHERE DAY(hiredate) < 15;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-------+--------+----------+------+------------+---------+------+--------+
 | empno | ename  | job      | mgr  | hiredate   | sal     | comm | deptno |
@@ -242,12 +242,12 @@ WHERE DAY(hiredate) < 15;
  ```
 
 Q14 . Display those employees who have joined before 15th of the month.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT * FROM employee
 WHERE DAY(hiredate) < 15;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-------+--------+----------+------+------------+---------+------+--------+
 | empno | ename  | job      | mgr  | hiredate   | sal     | comm | deptno |
@@ -265,13 +265,13 @@ WHERE DAY(hiredate) < 15;
  ```
 
 Q15 . Display those employees whose joining date is available in deptno.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT * FROM employee
 WHERE hiredate IS NOT NULL
 AND deptno IS NOT NULL;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-------+--------+-----------+------+------------+---------+---------+--------+
 | empno | ename  | job       | mgr  | hiredate   | sal     | comm    | deptno |
