@@ -5,7 +5,7 @@ Q1 . Display the total number of employee working in the company.
 ```sql
  SELECT COUNT(*) AS total_employees FROM employee;
  ```
- ## Output
+ ## <h4>Output:</h4>
  ```sql
  +-----------------+
 | total_employees |
@@ -37,7 +37,7 @@ Q3 . Display the maximum salary from employee table.
 ```sql
  SELECT MAX(sal) AS max_salary FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +------------+
 | max_salary |
@@ -52,7 +52,7 @@ Q4 . Display the minimum salary from employee table.
 ```sql
  SELECT MIN(sal) AS min_salary FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +------------+
 | min_salary |
@@ -67,7 +67,7 @@ Q5 . Display the average salary from employee table.
 ```sql
  SELECT AVG(sal) AS avg_salary FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +-------------+
 | avg_salary  |
