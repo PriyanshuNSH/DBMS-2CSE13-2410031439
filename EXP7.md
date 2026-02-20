@@ -1,4 +1,4 @@
-# Experiment-7
+## <center><h2>Experiment 7</h2></center>
 
 Q1 . Compute the number of days remaining this year.
 ## <h4>Queries:</h4>
