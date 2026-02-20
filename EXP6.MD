@@ -1,4 +1,4 @@
-## Experiment 6
+## <center><h2>Experiment 6</h2></center>
 
 Q1 . Display empno, ename, deptno from employee table. Instead of displaying department numbers, display the related department name (Use decode function).
 ## <h4>Queries:</h4>
