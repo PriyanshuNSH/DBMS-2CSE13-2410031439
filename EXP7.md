@@ -1,14 +1,14 @@
-# Experiment-7
+# <center><h2>Experiment 7</h2></center>
 
 Q1 . Compute the number of days remaining this year.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT DATEDIFF(
     STR_TO_DATE(CONCAT(YEAR(CURDATE()),'-12-31'),'%Y-%m-%d'),
     CURDATE()
 ) AS days_remaining;
 ```
-## Output
+## <h4>Output:</h4>
  ```sql 
 +----------------+
 | days_remaining |
@@ -18,7 +18,7 @@ Q1 . Compute the number of days remaining this year.
 1 row in set (0.000 sec)
 ```
 Q2 . Find the highest and lowest salaries and the difference between of them.
-## Queries
+## <h4>Queries:</h4>
  ```sql
  SELECT 
 MAX(sal) AS highest_salary,
@@ -26,7 +26,7 @@ MIN(sal) AS lowest_salary,
 MAX(sal) - MIN(sal) AS difference
 FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
  ```sql
 +----------------+---------------+------------+
 | highest_salary | lowest_salary | difference |
@@ -36,13 +36,13 @@ FROM employee;
 1 row in set (0.060 sec)
 ```
 Q3 . List employee whose commission is greater than 25% of their salaries.
-## Queries
+## <h4>Queries:</h4>
  ```sql
  SELECT *
     -> FROM employee
     -> WHERE comm > (sal * 0.25);
 ```
- ## Output
+## <h4>Output:</h4>
  ```sql    
 +-------+--------+----------+------+------------+---------+---------+--------+
 | empno | ename  | job      | mgr  | hiredate   | sal     | comm    | deptno |
@@ -52,13 +52,13 @@ Q3 . List employee whose commission is greater than 25% of their salaries.
 1 row in set (0.001 sec)
 ```
 Q4 . Make a query that displays salary in doller formet.
-## Queries
+## <h4>Queries:</h4>
  ```sql
  SELECT ename,
 CONCAT('$', FORMAT(sal,2)) AS salary_in_dollar
 FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
  ```sql
  +--------+------------------+
 | ename  | salary_in_dollar |
@@ -89,14 +89,14 @@ Q6 . Write a query to display the total number of employees, and out of that tot
 Q7 . Write a query to get the last Sunday of any month.
 
 Q8 . Display department numbers and total number of employees working in each eavh department.
-## Queries
+## <h4>Queries:</h4>
  ```sql
  SELECT deptno,
 COUNT(*) AS total_employees
 FROM employee
 GROUP BY deptno;
 ```
-## Output
+## <h4>Output:</h4>
  ```sql
  +--------+-----------------+
 | deptno | total_employees |
@@ -110,14 +110,14 @@ GROUP BY deptno;
 ```
 
 Q9 . Display the various jobs and total number of employees within each job group.
-## Queries
+## <h4>Queries:</h4>
  ```sql
  SELECT job,
 COUNT(*) AS total_employees
 FROM employee
 GROUP BY job;
 ```
-## Output
+## <h4>Output:</h4>
  ```sql
  +-----------+-----------------+
 | job       | total_employees |
@@ -132,14 +132,14 @@ GROUP BY job;
 ```
 
 Q10 . Display the depart numbers and total salary for each department. 
-## Queries
+## <h4>Queries:</h4>
  ```sql
  SELECT deptno,
 SUM(sal) AS total_salary
 FROM employee
 GROUP BY deptno;
 ```
-## Output
+## <h4>Output:</h4>
  ```sql
  +--------+--------------+
 | deptno | total_salary |

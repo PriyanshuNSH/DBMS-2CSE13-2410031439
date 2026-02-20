@@ -1,11 +1,11 @@
-## Experiment 5
+## <center><h2>Experiment 5</h2></center>
 
 Q1 . Display the total number of employee working in the company.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT COUNT(*) AS total_employees FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +-----------------+
 | total_employees |
@@ -16,11 +16,11 @@ Q1 . Display the total number of employee working in the company.
  ```
 
 Q2 . Display the total salary being paid to all employees.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT SUM(sal) AS total_salary FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +--------------+
 | total_salary |
@@ -33,11 +33,11 @@ MariaDB [Priyanshuj]>
  ```
 
 Q3 . Display the maximum salary from employee table.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT MAX(sal) AS max_salary FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +------------+
 | max_salary |
@@ -48,11 +48,11 @@ Q3 . Display the maximum salary from employee table.
  ```
 
 Q4 . Display the minimum salary from employee table.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT MIN(sal) AS min_salary FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +------------+
 | min_salary |
@@ -63,11 +63,11 @@ Q4 . Display the minimum salary from employee table.
  ```
 
 Q5 . Display the average salary from employee table.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT AVG(sal) AS avg_salary FROM employee;
  ```
- ## Output
+## <h4>Output:</h4>
  ```sql
  +-------------+
 | avg_salary  |
@@ -78,13 +78,13 @@ Q5 . Display the average salary from employee table.
  ```
 
 Q6 . Display the maximum salary being paid to clerk.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT MAX(sal) AS max_clerk_salary 
 FROM employee 
 WHERE job = 'CLERK';
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +------------------+
 | max_clerk_salary |
@@ -95,13 +95,13 @@ WHERE job = 'CLERK';
  ```
 
 Q7 . Display the maximum salary being in dept no 20.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT MIN(sal) AS min_salary_dept20 
 FROM employee 
 WHERE deptno = 20;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +-------------------+
 | min_salary_dept20 |
@@ -112,13 +112,13 @@ WHERE deptno = 20;
  ```
 
 Q8 . Display the minimum salary paid to any salesman.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT MIN(sal) AS min_salesman_salary 
 FROM employee 
 WHERE job = 'SALESMAN';
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +---------------------+
 | min_salesman_salary |
@@ -129,13 +129,13 @@ WHERE job = 'SALESMAN';
  ```
 
 Q9 . Display the average salary drawn by managers.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT AVG(sal) AS avg_manager_salary 
 FROM employee 
 WHERE job = 'MANAGER';
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +--------------------+
 | avg_manager_salary |
@@ -146,13 +146,13 @@ WHERE job = 'MANAGER';
  ```
 
 Q10 . Display the total salary drawn by analyst working in dept no 40.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT SUM(sal) AS total_analyst_salary 
 FROM employee 
 WHERE job = 'ANALYST' AND deptno = 40;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +----------------------+
 | total_analyst_salary |
@@ -163,11 +163,11 @@ WHERE job = 'ANALYST' AND deptno = 40;
  ```
 
 Q11 . Display the names of the employee in Uppercase.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT UPPER(ename) FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +--------------+
 | UPPER(ename) |
@@ -191,11 +191,11 @@ Q11 . Display the names of the employee in Uppercase.
  ```
 
 Q12 . Display the names of the employee in Lowercase.
-## Queries
+## <h4>Queries:</h4>
 ```sql
 SELECT LOWER(ename) FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +--------------+
 | LOWER(ename) |
@@ -219,12 +219,12 @@ SELECT LOWER(ename) FROM employee;
  ```
 
 Q13 . Display the names of the employee in Propercase.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT CONCAT(UCASE(LEFT(ename,1)), LCASE(SUBSTRING(ename,2))) 
 FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +---------------------------------------------------------+
 | CONCAT(UCASE(LEFT(ename,1)), LCASE(SUBSTRING(ename,2))) |
@@ -248,11 +248,11 @@ FROM employee;
  ```
 
 Q14 . Display the length of our name using appropriate function.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT LENGTH('Priyanshu');
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +---------------------+
 | LENGTH('Priyanshu') |
@@ -263,11 +263,11 @@ Q14 . Display the length of our name using appropriate function.
  ```
 
 Q15 . Display the length of all the employee names.
-## Queries
+## <h4>Queries:</h4>
 ```sql
  SELECT ename, LENGTH(ename) FROM employee;
 ```
-## Output
+## <h4>Output:</h4>
 ```sql
  +--------+---------------+
 | ename  | LENGTH(ename) |
