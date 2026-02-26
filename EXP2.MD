@@ -187,4 +187,8 @@ SELECT ENAME, DEPTNO FROM EMPLOYEE
 | MILLER | 10     |
 +--------+--------+
 2 rows in set
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 024d8d30f5b1c875857a809723b8993e185a14e0
